@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AL THARWANEYA ADMIN</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta
+      name="description"
+      content="Admin template that can be used to build dashboards for CRM, CMS, etc."
+    />
+    <meta name="author" content="Potenza Global Solutions" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- app favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+    <!-- plugin stylesheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendors.css" />
+    <!-- app style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+  </head>
+
+  <body>
+    <!-- begin app -->
+    <div class="app">
+      <!-- begin app-wrap -->
+      <div class="app-wrap">
+        <!-- begin pre-loader -->
+        <div class="loader">
+          <div class="h-100 d-flex justify-content-center">
+            <div class="align-self-center">
+              <img src="assets/img/loader/loader.svg" alt="loader" />
+            </div>
+          </div>
+        </div>
+
+        <header class="app-header top-bar">
+          <!-- begin navbar -->
+          <nav class="navbar navbar-expand-md">
+            <!-- begin navbar-header -->
+            <div class="navbar-header d-flex align-items-center">
+              <a class="navbar-brand" href="index.html">
+                <img
+                  src="assets/img/favicon.png"
+                  class="img-fluid logo-desktop"
+                  alt="logo"
+                />
+                <img
+                  src="assets/img/favicon.png"
+                  class="img-fluid logo-mobile"
+                  alt="logo"
+                />
+              </a>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="ti ti-align-left"></i>
+            </button>
+            <!-- end navbar-header -->
+            <!-- begin navigation -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="navigation d-flex">
+                <ul class="navbar-nav nav-left">
+                  <li
+                    class="nav-item full-screen d-none d-lg-block"
+                    id="btnFullscreen"
+                  >
+                    <a href="javascript:void(0)" class="nav-link expand">
+                      <i class="icon-size-fullscreen"></i>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav nav-right ml-auto">
+                  <li class="nav-item dropdown user-profile">
+                    <a
+                      href="javascript:void(0)"
+                      class="nav-link dropdown-toggle"
+                      id="navbarDropdown4"
+                      role="button"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img src="assets/img/avtar/02.jpg" alt="avtar-img" />
+                      <span class="bg-success user-status"></span>
+                    </a>
+                    <div
+                      class="dropdown-menu animated fadeIn"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <div class="bg-gradient px-4 py-3">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="mr-1">
+                            <h4 class="text-white mb-0">Admin</h4>
+                            <small class="text-white">admin@example.com</small>
+                          </div>
+                          <a
+                            href="index.html"
+                            class="text-white font-20 tooltip-wrapper"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title=""
+                            data-original-title="Logout"
+                          >
+                            <i class="zmdi zmdi-power"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- end navigation -->
+          </nav>
+          <!-- end navbar -->
+        </header>
+
+        <div class="app-container">
+          <div class="app-main" id="main">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-6 offset-3">
+                  <div class="row">
+                    <div
+                      class="col-sm-4 offset-lg-4 offset-md-4 offset-sm-0 m-b-30"
+                    >
+                      <div class="text-left">
+                        <h4 class="text-danger">CUSTOMER DETAILS</h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row mb-5">
+                    <div class="col-xl-12">
+                      <div class="card card-statistics">
+                        <div class="card-body">
+                          <form>
+                            <div class="form-group row">
+                              <label class="col-sm-2 col-form-label"
+                                ><b>BILL NO.</b></label
+                              >
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control" />
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-2 col-form-label"
+                                ><b>SALESMAN NAME</b></label
+                              >
+                              <div class="col-sm-10">
+                                <select class="form-control form-select">
+                                  <option value="" selected>
+                                    Select (DROPLIST)
+                                  </option>
+                                  <option value="">Suraj Jamdade</option>
+                                  <option value="">Suraj Jamdade</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label class="col-sm-2 col-form-label"
+                                ><b>NAME</b></label
+                              >
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control" />
+                              </div>
+                            </div>
+
+                            <div class="form-group row">
+                              <label class="col-sm-2 col-form-label"
+                                ><b>MOBILE NUMBER</b></label
+                              >
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control" />
+                              </div>
+                            </div>
+
+                            <div class="form-group row">
+                              <label class="col-sm-2 col-form-label"
+                                ><b>DATE OF BIRTH</b></label
+                              >
+                              <div class="col-sm-10">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="12/12/2012"
+                                />
+                              </div>
+                            </div>
+
+                            <div class="form-group row">
+                              <label class="col-sm-2 col-form-label"
+                                ><b>ORDER DATE</b></label
+                              >
+                              <div class="col-sm-10">
+                                <input type="date" class="form-control" />
+                              </div>
+                            </div>
+
+                            <div class="form-group row">
+                              <label class="col-sm-2 col-form-label"
+                                ><b>DELIVERY DATE</b></label
+                              >
+                              <div class="col-sm-10">
+                                <input type="date" class="form-control" />
+                              </div>
+                            </div>
+
+                            <div class="form-group row">
+                              <label class="col-sm-2 col-form-label"
+                                ><b>GST NUMBER</b></label
+                              >
+                              <div class="col-sm-10">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  value="27DNYPP0795M1ZR"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div
+                      class="col-sm-4 offset-lg-4 offset-md-4 offset-sm-0 m-b-30"
+                    >
+                      <div class="text-center">
+                        <h4 class="text-danger">BILLING</h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row mb-5">
+                    <div class="col-xl-12">
+                      <div class="card card-statistics">
+                        <div class="card-body">
+                          <form id="dynamic-form">
+                            <div id="form-container">
+                              <div class="row gx-2 gy-2 form-group-row mt-3">
+                                <div class="col-12 col-md-3">
+                                  <div class="form-group">
+                                    <label><b>ITEM</b></label>
+                                    <select
+                                      class="form-control form-select"
+                                      name="item[]"
+                                    >
+                                      <option value="" selected>Select</option>
+                                      <option value="shirt">SHIRT</option>
+                                      <option value="pant">PANT</option>
+                                      <option value="kurta">KURTA</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                  <div class="form-group">
+                                    <label><b>QUANTITY</b></label>
+                                    <input
+                                      type="number"
+                                      class="form-control"
+                                      name="quantity[]"
+                                      placeholder="Enter quantity"
+                                      min="1"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="col-12 col-md-3">
+                                  <div class="form-group">
+                                    <label><b>PRICE</b></label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      name="price[]"
+                                      placeholder="Enter price"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="col-12 col-md-3 d-flex">
+                                  <button
+                                    type="button"
+                                    class="btn btn-primary add-row"
+                                    style="height: 40px; margin-top: 7px"
+                                  >
+                                    <i class="fa fa-plus"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+
+                          <div class="mt-4 table-responsive">
+                            <table class="table table-bordered text-center">
+                              <thead>
+                                <tr>
+                                  <th scope="col" colspan="2" class="text-dark">
+                                    ITEMS SUMMARY
+                                  </th>
+                                  <th scope="col" class="text-dark">
+                                    TOTAL BILL
+                                  </th>
+                                  <th scope="col">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="total-bill"
+                                      name="total-bill"
+                                      placeholder=""
+                                    />
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" class="text-dark">SHIRT</th>
+                                  <td class="text-dark">1</td>
+                                  <td class="text-dark">DISCOUNT</td>
+                                  <td>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="discount"
+                                      name="discount"
+                                      placeholder=""
+                                    />
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="text-dark">PANT</th>
+                                  <td class="text-dark">1</td>
+                                  <td class="text-dark">ADVANCE</td>
+                                  <td>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="advance"
+                                      name="advance"
+                                      placeholder=""
+                                    />
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" class="text-dark">KURTA</th>
+                                  <td class="text-dark">2</td>
+                                  <td class="text-dark">BALANCE</td>
+                                  <td>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="balance"
+                                      name="balance"
+                                      placeholder=""
+                                    />
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th
+                                    scope="row"
+                                    class="text-center text-danger"
+                                  >
+                                    TOTAL QUANTITY
+                                  </th>
+                                  <th class="text-center text-danger">4</th>
+                                  <td colspan="2"></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div
+                      class="col-sm-4 offset-lg-4 offset-md-4 offset-sm-0 m-b-30"
+                    >
+                      <div class="text-center">
+                        <h4 class="text-danger">MEASURMENTS</h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xl-12">
+                      <div class="card card-statistics">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-lg-10 col-md-10 col-10">
+                              <div class="mt-4 table-responsive">
+                                <table class="table table-borderless">
+                                  <thead>
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        <div class="form-group">
+                                          <label><b>CUTTING DATE </b></label>
+                                          <input
+                                            type="date"
+                                            class="form-control"
+                                            placeholder=""
+                                          />
+                                        </div>
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <div class="form-group">
+                                          <label><b>READY DATE</b></label>
+                                          <input
+                                            type="date"
+                                            class="form-control"
+                                            placeholder=""
+                                          />
+                                        </div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                </table>
+
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        PARTICULARS
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <select
+                                          name=""
+                                          class="form-control form-select"
+                                          id=""
+                                        >
+                                          <option value="" selected>
+                                            Select
+                                          </option>
+                                          <option value="">SHIRT</option>
+                                          <option value="">KURTA</option>
+                                          <option value="">JACKET</option>
+                                          <option value="">SHERWANI</option>
+                                          <option value="">JODHPURI</option>
+                                          <option value="">BLAZER</option>
+                                          <option value="">BANDI</option>
+                                          <option value="">KHAMEEJ</option>
+                                        </select>
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <select
+                                          name=""
+                                          class="form-control form-select"
+                                          id=""
+                                        >
+                                          <option value="" selected>
+                                            Select
+                                          </option>
+                                          <option value="">SHIRT</option>
+                                          <option value="">KURTA</option>
+                                          <option value="">JACKET</option>
+                                          <option value="">SHERWANI</option>
+                                          <option value="">JODHPURI</option>
+                                          <option value="">BLAZER</option>
+                                          <option value="">BANDI</option>
+                                          <option value="">KHAMEEJ</option>
+                                        </select>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        LENGTH
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                    </tr>
+
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        SHOULDER
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                    </tr>
+
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        SLEEVE
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                    </tr>
+
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        ARM
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <div class="row">
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <div class="row">
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </th>
+                                    </tr>
+
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        CUFF
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                    </tr>
+
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        3/4
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <div class="row">
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <div class="row">
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </th>
+                                    </tr>
+
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        COLLAR
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <input
+                                          type="number"
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                    </tr>
+
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        CHEST
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <div class="row">
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <div class="row">
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </th>
+                                    </tr>
+
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        BELLY
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <div class="row">
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <div class="row">
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </th>
+                                    </tr>
+
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        HIP
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <div class="row">
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <div class="row">
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                          <div class="col-6">
+                                            <input
+                                              type="number"
+                                              class="form-control"
+                                              placeholder=""
+                                            />
+                                          </div>
+                                        </div>
+                                      </th>
+                                    </tr>
+
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        STYLE
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <select
+                                          name=""
+                                          class="form-control form-select"
+                                          id=""
+                                        >
+                                          <option value="" selected>
+                                            Select
+                                          </option>
+                                          <option value="">APPLE</option>
+                                          <option value="">MANELA</option>
+                                          <option value="">
+                                            MANELA SIDE CUT
+                                          </option>
+                                          <option value="">MANELA ROUND</option>
+                                        </select>
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <select
+                                          name=""
+                                          class="form-control form-select"
+                                          id=""
+                                        >
+                                          <option value="" selected>
+                                            Select
+                                          </option>
+                                          <option value="">
+                                            CHAINESE COLLOR SAMOR GOAT
+                                          </option>
+                                          <option value="">
+                                            CHAINESE COLLOR REGULAR CUFF
+                                          </option>
+                                          <option value="">
+                                            CHAINESE COLLOR REGULAR CUFF VARTI 1
+                                            POCKET
+                                          </option>
+                                          <option value="">
+                                            CHAINESE COLLOR REGULAR CUFF VARTI 1
+                                            POCKET SIDE 2 POCKET
+                                          </option>
+                                          <option value="">
+                                            REGULAR COLLOR REGULAR CUFF
+                                          </option>
+                                          <option value="">
+                                            CHAINESE COLLOR ¾ MATCHING
+                                          </option>
+                                        </select>
+                                      </th>
+                                    </tr>
+
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        TEXT NOTE
+                                      </th>
+                                      <th
+                                        scope="col"
+                                        class="text-dark"
+                                        colspan="2"
+                                      >
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <th
+                                        scope="col"
+                                        colspan="2"
+                                        class="text-dark"
+                                      >
+                                        TEXT NOTE
+                                      </th>
+                                      <th
+                                        scope="col"
+                                        class="text-dark"
+                                        colspan="2"
+                                      >
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          placeholder=""
+                                        />
+                                      </th>
+                                    </tr>
+                                  </tbody>
+                                </table>
+
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col" class="text-dark">
+                                        <div class="form-group">
+                                          <label><b>VOICE NOTE </b></label>
+                                          <input
+                                            type="date"
+                                            class="form-control"
+                                            placeholder=""
+                                          />
+                                        </div>
+                                      </th>
+                                      <th scope="col" class="text-dark">
+                                        <div class="form-group">
+                                          <label><b> PICTURE</b></label>
+                                          <input
+                                            type="file"
+                                            class="form-control"
+                                            placeholder=""
+                                          />
+                                        </div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                </table>
+                              </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-2">
+                              <button
+                                type="button"
+                                class="btn btn-primary add-row"
+                                style="height: 40px; margin-top: 7px"
+                              >
+                                <i class="fa fa-plus"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end app-wrap -->
+    </div>
+    <!-- end app -->
+
+    <!-- plugins -->
+    <script src="assets/js/vendors.js"></script>
+
+    <!-- custom app -->
+    <script src="assets/js/app.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const formContainer = document.getElementById("form-container");
+
+        document.addEventListener("click", function (event) {
+          if (event.target.closest(".add-row")) {
+            const newRow = formContainer.firstElementChild.cloneNode(true);
+
+            // Clear input values
+            newRow.querySelectorAll("input, select").forEach((el) => {
+              el.value = "";
+            });
+
+            // Change the plus button to a remove button
+            const button = newRow.querySelector(".add-row");
+            button.innerHTML = '<i class="fa fa-minus"></i>';
+            button.classList.remove("btn-primary");
+            button.classList.add("btn-danger");
+            button.classList.replace("add-row", "remove-row");
+
+            formContainer.appendChild(newRow);
+          }
+
+          if (event.target.closest(".remove-row")) {
+            event.target.closest(".form-group-row").remove();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
