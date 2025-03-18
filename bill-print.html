@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Jura:wght@300;400;500;600;700&family=Kdam+Thmor+Pro&family=Lobster&family=Manrope:wght@200;300;400;500;600;700;800&family=Nunito:ital,wght@0,600;0,700;0,800;0,900;0,1000;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pragati+Narrow:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      body {
+        margin: 0;
+        padding: 20px;
+        background: #f8f9fa;
+        font-family: "Jura", sans-serif;
+      }
+      a {
+        text-decoration: none;
+      }
+      .invoice-container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+      .invoice-container::after {
+        content: "";
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        width: 560px;
+        height: 200px;
+        background: url(assets/img/logo.png) no-repeat center;
+        background-size: contain;
+        opacity: 0.1;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+      .header {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 15px;
+      }
+      .header h2 {
+        margin: 0;
+        color: #d9534f;
+      }
+      .logo-barcode {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .logo-barcode img {
+        max-height: 80px;
+      }
+      .invoice-details,
+      .table-container {
+        width: 100%;
+        margin-top: 20px;
+      }
+      .table-container table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .table-container th,
+      .table-container td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+      .table-container th {
+        background: #f1f1f1;
+      }
+      .footer {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .terms {
+        margin-top: 20px;
+        font-size: 14px;
+        background: #f1f1f1;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .btn-container {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        background: #d9534f;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 5px;
+        border-radius: 5px;
+      }
+      .btn:hover {
+        background: #c9302c;
+      }
+
+      .barcode-card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 35px;
+        margin-bottom: 2rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background: #f8f9fa;
+      }
+
+      .barcode-image {
+        width: 130px;
+        height: 71px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .barcode-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .barcode-title {
+        text-align: center;
+        margin-top: 5px;
+        font-weight: bold;
+        color: #007bff;
+      }
+
+      .barcode-details {
+        text-align: left;
+      }
+
+      .barcode-id {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .barcode-text {
+        color: #333;
+        font-weight: bold;
+        margin: 3px 0;
+        font-size: 12px;
+      }
+
+      .barcode-text span {
+        font-weight: 600;
+      }
+   
+      .table-container {
+            width: 100%;
+            overflow-x: auto; /* Enables horizontal scrolling */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px; /* Prevents excessive shrinking */
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            white-space: nowrap; /* Prevents text from wrapping */
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        td:last-child {
+            color: red;
+            font-weight: bold;
+        }
+
+        
+    </style>
+  </head>
+  <body>
+    <div class="invoice-container">
+      <div class="header">
+        <div class="logo-barcode">
+          <img src="assets/img/logo.png" alt="Company Logo" />
+          <div>
+            <h2>Tax Invoice</h2>
+            <p><strong>cell. +918769841472 | +919352264850</strong></p>
+            <small>
+              Wadmukhwadi, Amba Bus Stop, Charholl Budruk,<br />
+              Near Uttam Sweets, Alandi - Pune Road- 4110 18
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="invoice-details">
+        <p><strong>GST Number:</strong> 27DNYPP0795M12R</p>
+        <div style="display: flex; justify-content: space-between; gap: 10px">
+          <span><strong>Bill No:</strong> 10045</span>
+          <span><strong>Order Date:</strong> 18/03/2025</span>
+          <span><strong>Delivery Date:</strong> 26/03/2025</span>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table class="table-overflow"
+            <tr>
+                <th>Fabrics</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+                <th>Discount</th>
+                <th>Advance</th>
+                <th>Advance Date</th>
+                <th>Balance</th>
+            </tr>
+            <tr>
+                <td>Shirt</td>
+                <td>1</td>
+                <td>Rs. 3000</td>
+                <td>200</td>
+                <td>500</td>
+                <td>18/03/2025</td>
+                <td>2300</td>
+            </tr>
+            <tr>
+                <td>Kurta</td>
+                <td>1</td>
+                <td>Rs. 3000</td>
+                <td>200</td>
+                <td>500</td>
+                <td>18/03/2025</td>
+                <td>2300</td>
+            </tr>
+            <tr>
+                <td>Pant</td>
+                <td>1</td>
+                <td>Rs. 3000</td>
+                <td>200</td>
+                <td>500</td>
+                <td>18/03/2025</td>
+                <td>2300</td>
+            </tr>
+        </table>
+
+     
+    </div>
+    <div class="terms">
+        <p>• डिलीव्हरी वेळी पावती आणणे आवश्यक आहे.</p>
+        <p>• डिलीव्हरी पुर्ण पेमेंट केल्यानंतर दिली जाईल.</p>
+        <p>
+          • डिलीव्ही तारखे पासुन १५ दीवसाच्या आत आपले कपडे घेऊन जावे त्या नंतर
+          आम्ही जबाबदार नाही.
+        </p>
+        <p>• लाईट नसल्या कारणाने डिलीव्हरीसाठी उशीर होऊ शकतो.</p>
+        <p>
+          • कपडधांच्या कलर व फिटींग बद्दल काही समस्या असल्यास डिलीव्हरी तारखेस
+          पासुन १५ दीवसाच्या आत घेवुन येणे.
+        </p>
+        <p><strong>डिलीव्हरी वेळ :</strong> 3:30pm to 7:30 pm</p>
+        <p><strong>दुकानाची वेळ :</strong> 9:30am to 8:30 pm</p>
+        <p><strong>सोमवार बंद</strong></p>
+      </div>
+
+      <div class="footer">
+        <p>Customer Signature</p>
+        <p>Cotton Industries</p>
+      </div>
+
+      <div class="btn-container">
+        <a href="todays-bill.html" class="btn">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 15l-6-6 6-6"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Back
+        </a>
+        <button class="btn" onclick="window.print()">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 1h4v4H6V1zm-4 4h2V2H2v3zm0 2h12v6H2V7zm2 6h8v2H4v-2zm8-2H4v-2h8v2z"
+            />
+          </svg>
+          Print
+        </button>
+      </div>
+
+    <div class="">
+      <div class="barcode-card">
+        <div class="barcode-image">
+          <img src="assets/img/barcode.png" alt="Barcode" class="barcode-img" />
+          <h6 class="barcode-title">SP COTTON INDUSTRIES</h6>
+        </div>
+        <div class="barcode-details">
+          <h5 class="barcode-id">10006</h5>
+          <p class="barcode-text">TOTAL SHIRT - <span>1</span></p>
+          <p class="barcode-text">SHIRT NO - <span>01</span></p>
+        </div>
+      </div>
+
+      <div class="barcode-card">
+        <div class="barcode-image">
+          <img src="assets/img/barcode.png" alt="Barcode" class="barcode-img" />
+          <h6 class="barcode-title">SP COTTON INDUSTRIES</h6>
+        </div>
+        <div class="barcode-details">
+          <h5 class="barcode-id">10006</h5>
+          <p class="barcode-text">TOTAL KURTA - <span>1</span></p>
+          <p class="barcode-text">KURTA NO - <span>01</span></p>
+        </div>
+      </div>
+
+      <div class="barcode-card">
+        <div class="barcode-image">
+          <img src="assets/img/barcode.png" alt="Barcode" class="barcode-img" />
+          <h6 class="barcode-title">SP COTTON INDUSTRIES</h6>
+        </div>
+        <div class="barcode-details">
+          <h5 class="barcode-id">10006</h5>
+          <p class="barcode-text">TOTAL PANT - <span>1</span></p>
+          <p class="barcode-text">PANT NO - <span>01</span></p>
+        </div>
+      </div>
+
+      <div class="btn-container">
+        <a href="todays-bill.html" class="btn">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 15l-6-6 6-6"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Back
+        </a>
+        <button class="btn" onclick="window.print()">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 1h4v4H6V1zm-4 4h2V2H2v3zm0 2h12v6H2V7zm2 6h8v2H4v-2zm8-2H4v-2h8v2z"
+            />
+          </svg>
+          Print
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

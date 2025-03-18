@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AL THARWANEYA ADMIN</title>
+    <title>SP COTTON | SALES</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
-    <meta
-      name="description"
-      content="Admin template that can be used to build dashboards for CRM, CMS, etc."
-    />
-    <meta name="author" content="Potenza Global Solutions" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <!-- app favicon -->
-    <link rel="shortcut icon" href="assets/img/favicon.png" />
+    <link rel="shortcut icon" href="assets/img/logo.webp" />
     <!-- google fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
@@ -336,10 +331,63 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <div class="modal-title" id="exampleModalLabel">
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button
+                    class="nav-link active mx-2"
+                    id="nav-Basic-tab"
+                    data-toggle="tab"
+                    data-target="#nav-Basic"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-Basic"
+                    aria-selected="true"
+                  >
+                    Basic Details
+                  </button>
+                  <button
+                    class="nav-link mx-2"
+                    id="nav-Fabrics-tab"
+                    data-toggle="tab"
+                    data-target="#nav-Fabrics"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-Fabrics"
+                    aria-selected="false"
+                  >
+                    Items
+                  </button>
+                  <button
+                    class="nav-link mx-2"
+                    id="nav-Top-tab"
+                    data-toggle="tab"
+                    data-target="#nav-Top"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-Top"
+                    aria-selected="false"
+                  >
+                    Payments
+                  </button>
+                  <button
+                    class="nav-link mx-2"
+                    id="nav-Bottom-tab"
+                    data-toggle="tab"
+                    data-target="#nav-Bottom"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-Bottom"
+                    aria-selected="false"
+                  >
+                    Note
+                  </button>
+                </div>
+              </nav>
+            </div>
             <button
               type="button"
               class="close"
@@ -349,7 +397,141 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">...</div>
+          <div class="modal-body">
+            <div class="tab-content" id="nav-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="nav-Basic"
+                role="tabpanel"
+                aria-labelledby="nav-Basic-tab"
+              >
+                <div class="row">
+                  <div class="col-md-12 col-12 mb-3">
+                    <div class="table-responsive">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="text-dark">ALTER NUMBER</th>
+                            <th scope="col" class="text-dark">#001</th>
+                          </tr>
+                          <tr>
+                            <th scope="col" class="text-dark">CUSTOMER NAME</th>
+                            <th scope="col" class="text-dark">Suraj Jamdade</th>
+                          </tr>
+                          <tr>
+                            <th scope="col" class="text-dark">MOBILE NUMBER</th>
+                            <th scope="col" class="text-dark">
+                              +91 9090909090
+                            </th>
+                          </tr>
+                          <tr>
+                            <th scope="col" class="text-dark">ALTER DATE</th>
+                            <th scope="col" class="text-dark">25 March 2025</th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="nav-Fabrics"
+                role="tabpanel"
+                aria-labelledby="nav-Fabrics-tab"
+              >
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="text-dark">ITEMS</th>
+                        <th scope="col" class="text-dark">DETAILS</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="text-dark">Shirt</th>
+                        <td class="text-dark">1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-Top"
+                role="tabpanel"
+                aria-labelledby="nav-Top-tab"
+              >
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="text-dark">BILL</th>
+                        <th scope="col" class="text-dark">Rs.500</th>
+                      </tr>
+                      <tr>
+                        <th scope="col" class="text-dark">ADVANCE</th>
+                        <th scope="col" class="text-dark">Rs.100</th>
+                      </tr>
+                      <tr>
+                        <th scope="col" class="text-dark">BALANCE</th>
+                        <th scope="col" class="text-dark">Rs.400</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-Bottom"
+                role="tabpanel"
+                aria-labelledby="nav-Bottom-tab"
+              >
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">
+                          Voice Note
+                        </th>
+
+                        <td class="text-dark" colspan="2">
+                          <audio controls>
+                            <source
+                              src="your-audio-file.mp3"
+                              type="audio/mpeg"
+                            />
+                            Your browser does not support the audio element.
+                          </audio>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="text-dark" colspan="2">
+                          Picture
+                        </th>
+
+                        <td class="text-dark" colspan="2">
+                          <div style="width: 50px; height: 50px">
+                            <img
+                              src="assets/img/fabric.jpeg"
+                              alt="fabrix"
+                              style="
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                              "
+                            />
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="modal-footer">
             <button
               type="button"
@@ -358,7 +540,9 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <a href="alter-recipt.html" class="btn btn-primary">
+              <i class="nav-icon ti ti-file"></i> Print</a
+            >
           </div>
         </div>
       </div>

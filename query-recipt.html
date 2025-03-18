@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
+
+      body {
+        margin: 0;
+        padding: 20px;
+        background: #f8f9fa;
+        font-family: "Jura", sans-serif;
+      }
+      a {
+        text-decoration: none;
+      }
+      .invoice-container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        position: relative;
+      }
+      .invoice-container::after {
+        content: "";
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        width: 560px;
+        height: 200px;
+        background: url(assets/img/logo.png) no-repeat center;
+        background-size: contain;
+        opacity: 0.1;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+      .header {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 15px;
+      }
+      .header h2 {
+        margin: 0;
+        color: #d9534f;
+      }
+      .logo-barcode {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .logo-barcode img {
+        max-height: 80px;
+      }
+      .invoice-details {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 2rem;
+      }
+      .table-container {
+        width: 100%;
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px; /* Prevents excessive shrinking */
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+        white-space: nowrap; /* Prevents text from wrapping */
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      td:last-child {
+        color: red;
+        font-weight: bold;
+      }
+      .terms {
+        margin-top: 20px;
+        font-size: 14px;
+        background: #f1f1f1;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .footer {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .btn-container {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        background: #d9534f;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 5px;
+        border-radius: 5px;
+      }
+      .btn:hover {
+        background: #c9302c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="invoice-container">
+      <div class="header">
+        <div class="logo-barcode">
+          <img src="assets/img/logo.png" alt="Company Logo" />
+          <div>
+            <h2>Tax Invoice</h2>
+            <p><strong>Cell: +918769841472 | +919352264850</strong></p>
+            <small>
+              Wadmukhwadi, Amba Bus Stop, Charholl Budruk,<br />
+              Near Uttam Sweets, Alandi - Pune Road- 411018
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="invoice-details">
+        <div style="display: flex; justify-content: space-between">
+          <p><strong>GST Number:</strong> 27DNYPP0795M12R</p>
+          <p><strong>Query No:</strong> 001</p>
+        </div>
+        <div style="display: flex; justify-content: space-between">
+          <span><strong>Customer Name:</strong> Suraj Jamdade</span>
+          <span><strong>Mobile Number:</strong> +91 9090909090</span>
+          <span><strong>Query Date:</strong> 26/03/2025</span>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table class="table-overflow">
+          <thead>
+            <tr>
+              <th>Items</th>
+              <th>Quantity</th>
+              <th>Bill</th>
+              <th>Advance</th>
+              <th>Advance Date</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Shirt</td>
+              <td>1</td>
+              <td>Rs. 500</td>
+              <td>Rs. 200</td>
+              <td>18/03/2025</td>
+              <td>300</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="terms">
+        <p>• डिलीव्हरी वेळी पावती आणणे आवश्यक आहे.</p>
+        <p>• डिलीव्हरी पुर्ण पेमेंट केल्यानंतर दिली जाईल.</p>
+        <p>
+          • डिलीव्ही तारखे पासुन १५ दीवसाच्या आत आपले कपडे घेऊन जावे त्या नंतर
+          आम्ही जबाबदार नाही.
+        </p>
+        <p>• लाईट नसल्या कारणाने डिलीव्हरीसाठी उशीर होऊ शकतो.</p>
+        <p>
+          • कपडधांच्या कलर व फिटींग बद्दल काही समस्या असल्यास डिलीव्हरी तारखेस
+          पासुन १५ दीवसाच्या आत घेवुन येणे.
+        </p>
+        <p><strong>डिलीव्हरी वेळ :</strong> 3:30pm to 7:30 pm</p>
+        <p><strong>दुकानाची वेळ :</strong> 9:30am to 8:30 pm</p>
+        <p><strong>सोमवार बंद</strong></p>
+      </div>
+
+      <div class="footer">
+        <p>Customer Signature</p>
+        <p>Cotton Industries</p>
+      </div>
+
+      <div class="btn-container">
+        <a href="all-previous-query.html" class="btn">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 15l-6-6 6-6"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Back
+        </a>
+        <button class="btn" onclick="window.print()">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 1h4v4H6V1zm-4 4h2V2H2v3zm0 2h12v6H2V7zm2 6h8v2H4v-2zm8-2H4v-2h8v2z"
+            />
+          </svg>
+          Print
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
