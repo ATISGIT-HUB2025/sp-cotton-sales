@@ -190,230 +190,519 @@
                             <div class="col-sm-12 col-md-6"></div>
                             <div class="col-sm-12 col-md-6"></div>
                           </div>
-                          <div class="row">
-                            <div class="col-sm-12">
-                              <table
-                                id="datatable"
-                                class="display compact table table-striped table-bordered dataTable"
-                                role="grid"
-                                aria-describedby="datatable_info"
+                          <div class="">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                              <li class="nav-item" role="presentation">
+                                <button
+                                  class="nav-link active"
+                                  id="home-tab"
+                                  data-toggle="tab"
+                                  data-target="#home"
+                                  type="button"
+                                  role="tab"
+                                  aria-controls="home"
+                                  aria-selected="true"
+                                >
+                                  Today's Birthday
+                                </button>
+                              </li>
+                              <li class="nav-item mx-2" role="presentation">
+                                <button
+                                  class="nav-link"
+                                  id="profile-tab"
+                                  data-toggle="tab"
+                                  data-target="#profile"
+                                  type="button"
+                                  role="tab"
+                                  aria-controls="profile"
+                                  aria-selected="false"
+                                >
+                                  Next 10 Days Birthday
+                                </button>
+                              </li>
+                            </ul>
+
+                            <div class="tab-content" id="myTabContent">
+                              <div
+                                class="tab-pane fade show active"
+                                id="home"
+                                role="tabpanel"
+                                aria-labelledby="home-tab"
                               >
-                                <thead>
-                                  <tr role="row">
-                                    <th
-                                      class="sorting_asc"
-                                      tabindex="0"
-                                      aria-controls="datatable"
-                                      rowspan="1"
-                                      colspan="1"
-                                      aria-sort="ascending"
-                                      aria-label="Name: activate to sort column descending"
-                                      style="width: 155.672px"
-                                    >
-                                      #
-                                    </th>
-
-                                    <th
-                                      class="sorting"
-                                      tabindex="0"
-                                      aria-controls="datatable"
-                                      rowspan="1"
-                                      colspan="1"
-                                      aria-label="Office: activate to sort column ascending"
-                                      style="width: 113.078px"
-                                    >
-                                      Bill No.
-                                    </th>
-
-                                    <th
-                                      class="sorting"
-                                      tabindex="0"
-                                      aria-controls="datatable"
-                                      rowspan="1"
-                                      colspan="1"
-                                      aria-label="Start date: activate to sort column ascending"
-                                      style="width: 104.578px"
-                                    >
-                                      Name
-                                    </th>
-                                    <th
-                                      class="sorting"
-                                      tabindex="0"
-                                      aria-controls="datatable"
-                                      rowspan="1"
-                                      colspan="1"
-                                      aria-label="Start date: activate to sort column ascending"
-                                      style="width: 104.578px"
-                                    >
-                                      Mo. No.
-                                    </th>
-                                    <th
-                                      class="sorting"
-                                      tabindex="0"
-                                      aria-controls="datatable"
-                                      rowspan="1"
-                                      colspan="1"
-                                      aria-label="Start date: activate to sort column ascending"
-                                      style="width: 104.578px"
-                                    >
-                                      DOB
-                                    </th>
-                                    <th
-                                      class="sorting"
-                                      tabindex="0"
-                                      aria-controls="datatable"
-                                      rowspan="1"
-                                      colspan="1"
-                                      aria-label="Start date: activate to sort column ascending"
-                                      style="width: 104.578px"
-                                    >
-                                      Status
-                                    </th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr role="row" class="odd">
-                                    <td class="sorting_1">1</td>
-
-                                    <td>#001</td>
-
-                                    <td>Suraj Jamdade</td>
-                                    <td>+91 9090909090</td>
-                                    <td>14 Feb 1999</td>
-                                    <td>
-                                      <span class="badge badge-success"
-                                        >Send</span
+                                <table
+                                  id="datatable"
+                                  class="display compact table table-striped table-bordered dataTable"
+                                  role="grid"
+                                  aria-describedby="datatable_info"
+                                >
+                                  <thead>
+                                    <tr role="row">
+                                      <th
+                                        class="sorting_asc"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-sort="ascending"
+                                        aria-label="Name: activate to sort column descending"
+                                        style="width: 155.672px"
                                       >
-                                    </td>
-                                  </tr>
-                                  <tr role="row" class="odd">
-                                    <td class="sorting_1">1</td>
+                                        #
+                                      </th>
 
-                                    <td>#001</td>
-
-                                    <td>Suraj Jamdade</td>
-                                    <td>+91 9090909090</td>
-                                    <td>14 Feb 1999</td>
-                                    <td>
-                                      <span class="badge badge-success"
-                                        >Send</span
+                                      <th
+                                        class="sorting"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-label="Office: activate to sort column ascending"
+                                        style="width: 113.078px"
                                       >
-                                    </td>
-                                  </tr>
-                                  <tr role="row" class="odd">
-                                    <td class="sorting_1">1</td>
+                                        Bill No.
+                                      </th>
 
-                                    <td>#001</td>
-
-                                    <td>Suraj Jamdade</td>
-                                    <td>+91 9090909090</td>
-                                    <td>14 Feb 1999</td>
-                                    <td>
-                                      <span class="badge badge-success"
-                                        >Send</span
+                                      <th
+                                        class="sorting"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-label="Start date: activate to sort column ascending"
+                                        style="width: 104.578px"
                                       >
-                                    </td>
-                                  </tr>
-                                  <tr role="row" class="odd">
-                                    <td class="sorting_1">1</td>
-
-                                    <td>#001</td>
-
-                                    <td>Suraj Jamdade</td>
-                                    <td>+91 9090909090</td>
-                                    <td>14 Feb 1999</td>
-                                    <td>
-                                      <span class="badge badge-success"
-                                        >Send</span
+                                        Name
+                                      </th>
+                                      <th
+                                        class="sorting"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-label="Start date: activate to sort column ascending"
+                                        style="width: 104.578px"
                                       >
-                                    </td>
-                                  </tr>
-                                  <tr role="row" class="odd">
-                                    <td class="sorting_1">1</td>
-
-                                    <td>#001</td>
-
-                                    <td>Suraj Jamdade</td>
-                                    <td>+91 9090909090</td>
-                                    <td>14 Feb 1999</td>
-                                    <td>
-                                      <span class="badge badge-success"
-                                        >Send</span
+                                        Mo. No.
+                                      </th>
+                                      <th
+                                        class="sorting"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-label="Start date: activate to sort column ascending"
+                                        style="width: 104.578px"
                                       >
-                                    </td>
-                                  </tr>
-                                  <tr role="row" class="odd">
-                                    <td class="sorting_1">1</td>
+                                        Today's Birthday
+                                      </th>
 
-                                    <td>#001</td>
-
-                                    <td>Suraj Jamdade</td>
-                                    <td>+91 9090909090</td>
-                                    <td>14 Feb 1999</td>
-                                    <td>
-                                      <span class="badge badge-success"
-                                        >Send</span
+                                      <th
+                                        class="sorting"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-label="Start date: activate to sort column ascending"
+                                        style="width: 104.578px"
                                       >
-                                    </td>
-                                  </tr>
-                                  <tr role="row" class="odd">
-                                    <td class="sorting_1">1</td>
+                                        Status
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
 
-                                    <td>#001</td>
+                                      <td>#001</td>
 
-                                    <td>Suraj Jamdade</td>
-                                    <td>+91 9090909090</td>
-                                    <td>14 Feb 1999</td>
-                                    <td>
-                                      <span class="badge badge-success"
-                                        >Send</span
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>14 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>14 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>14 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>14 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>14 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>14 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>14 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>14 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>14 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>14 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div
+                                class="tab-pane fade"
+                                id="profile"
+                                role="tabpanel"
+                                aria-labelledby="profile-tab"
+                              >
+                                <table
+                                  id="datatable"
+                                  class="display compact table table-striped table-bordered dataTable"
+                                  role="grid"
+                                  aria-describedby="datatable_info"
+                                >
+                                  <thead>
+                                    <tr role="row">
+                                      <th
+                                        class="sorting_asc"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-sort="ascending"
+                                        aria-label="Name: activate to sort column descending"
+                                        style="width: 155.672px"
                                       >
-                                    </td>
-                                  </tr>
-                                  <tr role="row" class="odd">
-                                    <td class="sorting_1">1</td>
+                                        #
+                                      </th>
 
-                                    <td>#001</td>
-
-                                    <td>Suraj Jamdade</td>
-                                    <td>+91 9090909090</td>
-                                    <td>14 Feb 1999</td>
-                                    <td>
-                                      <span class="badge badge-success"
-                                        >Send</span
+                                      <th
+                                        class="sorting"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-label="Office: activate to sort column ascending"
+                                        style="width: 113.078px"
                                       >
-                                    </td>
-                                  </tr>
-                                  <tr role="row" class="odd">
-                                    <td class="sorting_1">1</td>
+                                        Bill No.
+                                      </th>
 
-                                    <td>#001</td>
-
-                                    <td>Suraj Jamdade</td>
-                                    <td>+91 9090909090</td>
-                                    <td>14 Feb 1999</td>
-                                    <td>
-                                      <span class="badge badge-success"
-                                        >Send</span
+                                      <th
+                                        class="sorting"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-label="Start date: activate to sort column ascending"
+                                        style="width: 104.578px"
                                       >
-                                    </td>
-                                  </tr>
-                                  <tr role="row" class="odd">
-                                    <td class="sorting_1">1</td>
-
-                                    <td>#001</td>
-
-                                    <td>Suraj Jamdade</td>
-                                    <td>+91 9090909090</td>
-                                    <td>14 Feb 1999</td>
-                                    <td>
-                                      <span class="badge badge-success"
-                                        >Send</span
+                                        Name
+                                      </th>
+                                      <th
+                                        class="sorting"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-label="Start date: activate to sort column ascending"
+                                        style="width: 104.578px"
                                       >
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
+                                        Mo. No.
+                                      </th>
+                                      <th
+                                        class="sorting"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-label="Start date: activate to sort column ascending"
+                                        style="width: 104.578px"
+                                      >
+                                        Next 10 Days Birthday
+                                      </th>
+
+                                      <th
+                                        class="sorting"
+                                        tabindex="0"
+                                        aria-controls="datatable"
+                                        rowspan="1"
+                                        colspan="1"
+                                        aria-label="Start date: activate to sort column ascending"
+                                        style="width: 104.578px"
+                                      >
+                                        Status
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>20 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>20 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>20 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>20 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>20 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>20 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>20 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>20 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>20 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                    <tr role="row" class="odd">
+                                      <td class="sorting_1">1</td>
+
+                                      <td>#001</td>
+
+                                      <td>Suraj Jamdade</td>
+                                      <td>+91 9090909090</td>
+                                      <td>20 March</td>
+
+                                      <td>
+                                        <span class="badge badge-success"
+                                          >Send</span
+                                        >
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
                             </div>
                           </div>
                         </div>
