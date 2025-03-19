@@ -70,6 +70,7 @@
         border: 1px solid #ddd;
         padding: 10px;
         text-align: left;
+        font-size: 12px;
       }
       .table-container th {
         background: #f1f1f1;
@@ -161,35 +162,93 @@
       .barcode-text span {
         font-weight: 600;
       }
-   
+
       .table-container {
-            width: 100%;
-            overflow-x: auto; /* Enables horizontal scrolling */
-        }
+        width: 100%;
+        overflow-x: auto; /* Enables horizontal scrolling */
+      }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 600px; /* Prevents excessive shrinking */
-        }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px; /* Prevents excessive shrinking */
+      }
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-            white-space: nowrap; /* Prevents text from wrapping */
-        }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+        white-space: nowrap; /* Prevents text from wrapping */
+      }
 
-        th {
-            background-color: #f4f4f4;
-        }
+      th {
+        background-color: #f4f4f4;
+      }
 
-        td:last-child {
-            color: red;
-            font-weight: bold;
-        }
+      td:last-child {
+        color: red;
+        font-weight: bold;
+      }
 
-        
+      .row_table {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+        gap: 20px; /* Adds space between items */
+        padding: 15px;
+        border: 1px solid #ccc; /* Optional: Adds a border */
+        background-color: #f9f9f9; /* Optional: Light background */
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .row_table {
+          grid-template-columns: 1fr; /* Stack in a single column on small screens */
+        }
+      }
+
+      .list-container {
+        border: 1px solid black;
+        padding: 15px;
+        width: 300px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+      }
+
+      .list-container h2 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .list-item {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        padding: 1px 0;
+      }
+
+      .list-item:last-child {
+        border-bottom: none;
+      }
+
+      strong {
+        color: #333;
+      }
+
+      .measurement-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+      }
+
+      /* Print-friendly styling */
+      @media print {
+        .list-container {
+          width: 100%;
+          border: none;
+          background: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -218,48 +277,46 @@
       </div>
 
       <div class="table-container">
-        <table class="table-overflow"
-            <tr>
-                <th>Fabrics</th>
-                <th>Quantity</th>
-                <th>Amount</th>
-                <th>Discount</th>
-                <th>Advance</th>
-                <th>Advance Date</th>
-                <th>Balance</th>
-            </tr>
-            <tr>
-                <td>Shirt</td>
-                <td>1</td>
-                <td>Rs. 3000</td>
-                <td>200</td>
-                <td>500</td>
-                <td>18/03/2025</td>
-                <td>2300</td>
-            </tr>
-            <tr>
-                <td>Kurta</td>
-                <td>1</td>
-                <td>Rs. 3000</td>
-                <td>200</td>
-                <td>500</td>
-                <td>18/03/2025</td>
-                <td>2300</td>
-            </tr>
-            <tr>
-                <td>Pant</td>
-                <td>1</td>
-                <td>Rs. 3000</td>
-                <td>200</td>
-                <td>500</td>
-                <td>18/03/2025</td>
-                <td>2300</td>
-            </tr>
+        <table class="table-overflow">
+          <tr>
+            <th>Fabrics</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th>Discount</th>
+            <th>Advance</th>
+            <th>Advance Date</th>
+            <th>Balance</th>
+          </tr>
+          <tr>
+            <td>Shirt</td>
+            <td>1</td>
+            <td>Rs. 3000</td>
+            <td>200</td>
+            <td>500</td>
+            <td>18/03/2025</td>
+            <td>2300</td>
+          </tr>
+          <tr>
+            <td>Kurta</td>
+            <td>1</td>
+            <td>Rs. 3000</td>
+            <td>200</td>
+            <td>500</td>
+            <td>18/03/2025</td>
+            <td>2300</td>
+          </tr>
+          <tr>
+            <td>Pant</td>
+            <td>1</td>
+            <td>Rs. 3000</td>
+            <td>200</td>
+            <td>500</td>
+            <td>18/03/2025</td>
+            <td>2300</td>
+          </tr>
         </table>
-
-     
-    </div>
-    <div class="terms">
+      </div>
+      <div class="terms">
         <p>• डिलीव्हरी वेळी पावती आणणे आवश्यक आहे.</p>
         <p>• डिलीव्हरी पुर्ण पेमेंट केल्यानंतर दिली जाईल.</p>
         <p>
@@ -315,8 +372,394 @@
           Print
         </button>
       </div>
+    </div>
 
-    <div class="">
+    <div class="invoice-container">
+      <div class="header">
+        <div class="logo-barcode">
+          <img src="assets/img/logo.png" alt="Company Logo" />
+          <div>
+            <h2>Tax Invoice</h2>
+            <p><strong>cell. +918769841472 | +919352264850</strong></p>
+            <small>
+              Wadmukhwadi, Amba Bus Stop, Charholl Budruk,<br />
+              Near Uttam Sweets, Alandi - Pune Road- 4110 18
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="invoice-details">
+        <p><strong>GST Number:</strong> 27DNYPP0795M12R</p>
+        <div style="display: flex; justify-content: space-between; gap: 10px">
+          <span><strong>Bill No:</strong> 10045</span>
+          <span><strong>Order Date:</strong> 18/03/2025</span>
+          <span><strong>Delivery Date:</strong> 26/03/2025</span>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table class="table-overflow">
+          <tr>
+            <th>Fabrics</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th>Discount</th>
+            <th>Advance</th>
+            <th>Advance Date</th>
+            <th>Balance</th>
+          </tr>
+          <tr>
+            <td>Shirt</td>
+            <td>1</td>
+            <td>Rs. 3000</td>
+            <td>200</td>
+            <td>500</td>
+            <td>18/03/2025</td>
+            <td>2300</td>
+          </tr>
+          <tr>
+            <td>Kurta</td>
+            <td>1</td>
+            <td>Rs. 3000</td>
+            <td>200</td>
+            <td>500</td>
+            <td>18/03/2025</td>
+            <td>2300</td>
+          </tr>
+          <tr>
+            <td>Pant</td>
+            <td>1</td>
+            <td>Rs. 3000</td>
+            <td>200</td>
+            <td>500</td>
+            <td>18/03/2025</td>
+            <td>2300</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="measurement-container">
+        <div class="measurement-responsive">
+          <div class="list-container">
+            <h4 style="text-align: center; color: red; padding: 0; margin: 0">
+              Top Details
+            </h4>
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Particulars:</p>
+              <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                <p style="font-size: 12px">Shirt</p>
+                <p style="font-size: 12px">Kurta</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Length:</p>
+              <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                <p style="font-size: 12px">10</p>
+                <p style="font-size: 12px">10</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Shoulder:</p>
+              <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                <p style="font-size: 12px">10</p>
+                <p style="font-size: 12px">10</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Sleeve:</p>
+              <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                <p style="font-size: 12px">10</p>
+                <p style="font-size: 12px">10</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Arm:</p>
+              <div
+                style="
+                  display: flex;
+                  gap: 50px;
+                  flex-wrap: wrap;
+                  font-size: 12px;
+                "
+              >
+                <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                  <span>10</span>
+                  <span>10</span>
+                </div>
+                <span>10</span>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Cuff:</p>
+              <div
+                style="
+                  display: flex;
+                  gap: 50px;
+                  flex-wrap: wrap;
+                  font-size: 12px;
+                "
+              >
+                <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                  <span>10</span>
+                  <span>10</span>
+                </div>
+                <span>10</span>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">3/4:</p>
+              <div
+                style="
+                  display: flex;
+                  gap: 50px;
+                  flex-wrap: wrap;
+                  font-size: 12px;
+                "
+              >
+                <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                  <span>10</span>
+                  <span>10</span>
+                </div>
+                <span>10</span>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Collar:</p>
+              <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                <p style="font-size: 12px">10</p>
+                <p style="font-size: 12px">10</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Chest:</p>
+              <div
+                style="
+                  display: flex;
+                  gap: 50px;
+                  flex-wrap: wrap;
+                  font-size: 12px;
+                "
+              >
+                <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                  <span>10</span>
+                  <span>10</span>
+                </div>
+                <span>10</span>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Belly:</p>
+              <div
+                style="
+                  display: flex;
+                  gap: 50px;
+                  flex-wrap: wrap;
+                  font-size: 12px;
+                "
+              >
+                <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                  <span>10</span>
+                  <span>10</span>
+                </div>
+                <span>10</span>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Hip:</p>
+              <div
+                style="
+                  display: flex;
+                  gap: 50px;
+                  flex-wrap: wrap;
+                  font-size: 12px;
+                "
+              >
+                <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                  <span>10</span>
+                  <span>10</span>
+                </div>
+                <span>10</span>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Style:</p>
+              <div>
+                <p style="font-size: 12px">Apple</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Text Note:</p>
+              <div>
+                <p style="font-size: 12px">test</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="measurement-responsive">
+          <div class="list-container">
+            <h4 style="text-align: center; color: red; padding: 0; margin: 0">
+              Bottom Details
+            </h4>
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Particulars:</p>
+              <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                <p style="font-size: 12px">Pant</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Length:</p>
+              <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                <p style="font-size: 12px">10</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Waist:</p>
+              <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                <p style="font-size: 12px">10</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Hip:</p>
+              <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                <p style="font-size: 12px">10</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Thigh:</p>
+              <div
+                style="
+                  display: flex;
+                  gap: 50px;
+                  flex-wrap: wrap;
+                  font-size: 12px;
+                "
+              >
+                <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                  <span>10</span>
+                  <span>10</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Knee:</p>
+              <div
+                style="
+                  display: flex;
+                  gap: 50px;
+                  flex-wrap: wrap;
+                  font-size: 12px;
+                "
+              >
+                <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                  <span>10</span>
+                  <span>10</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Potree:</p>
+              <div
+                style="
+                  display: flex;
+                  gap: 50px;
+                  flex-wrap: wrap;
+                  font-size: 12px;
+                "
+              >
+                <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                  <span>10</span>
+                  <span>10</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Bottom:</p>
+              <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                <p style="font-size: 12px">10</p>
+              </div>
+            </div>
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Pockland:</p>
+              <div style="display: flex; gap: 50px; flex-wrap: wrap">
+                <p style="font-size: 12px">10</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Style:</p>
+              <div>
+                <p style="font-size: 12px">1 back pocket</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <p style="font-size: 12px; font-weight: bold">Text Note:</p>
+              <div>
+                <p style="font-size: 12px">test</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-container">
+        <a href="todays-bill.html" class="btn">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 15l-6-6 6-6"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Back
+        </a>
+        <button class="btn" onclick="window.print()">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 1h4v4H6V1zm-4 4h2V2H2v3zm0 2h12v6H2V7zm2 6h8v2H4v-2zm8-2H4v-2h8v2z"
+            />
+          </svg>
+          Print
+        </button>
+      </div>
+    </div>
+
+    <div class="invoice-container">
       <div class="barcode-card">
         <div class="barcode-image">
           <img src="assets/img/barcode.png" alt="Barcode" class="barcode-img" />

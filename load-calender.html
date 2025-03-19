@@ -20,6 +20,19 @@
     <!-- app style -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Include Choices.js CSS & JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
   </head>
 
   <body>
@@ -103,7 +116,7 @@
                         >
                           <div class="mr-1">
                             <h4 class="text-white mb-0">Admin</h4>
-                            <small class="text-white">admin@example.com</small>
+                            <small class="text-white">salesman@gmail.com</small>
                           </div>
                           <a
                             href="index.html"
@@ -134,38 +147,253 @@
                 <div class="col-md-12 m-b-30">
                   <div class="d-block d-lg-flex flex-nowrap align-items-center">
                     <div class="page-title mr-4 pr-4 border-right">
-                      <h1>Load Calender</h1>
+                      <h1>LOAD CALANDER</h1>
                     </div>
                     <div class="breadcrumb-bar align-items-center">
-                      <nav>
-                        <ol class="breadcrumb p-0 m-b-0">
-                          <li class="breadcrumb-item">
-                            <a
-                              href="dashboard.html"
-                              class="btn btn-primary btn-xs"
-                            >
-                              <i class="fa fa-chevron-circle-left"></i> BACK</a
-                            >
-                          </li>
-                        </ol>
-                      </nav>
+                      <div class="">
+                        <div class="">
+                          <a
+                            href="dashboard.html"
+                            class="btn btn-primary btn-xs"
+                          >
+                            <i class="fa fa-chevron-circle-left"></i> BACK</a
+                          >
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <!-- begin row -->
               <div class="row">
                 <div class="col-lg-12">
                   <div class="card card-statistics">
-                    <div class="card-header">
-                      <div class="card-heading">
-                        <h4 class="card-title">Calendar</h4>
+                    <div class="row mt-3 gy-4">
+                      <div class="col-lg-6 col-12 mx-3">
+                        <div class="input-group mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search Here ...."
+                            aria-label="Recipient's username"
+                            aria-describedby="button-addon2"
+                          />
+                          <div class="input-group-append">
+                            <button
+                              class="btn btn-primary"
+                              type="button"
+                              id="button-addon2"
+                            >
+                              Search
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-2 col-12 offset-lg-3">
+                        <button
+                          type="button"
+                          class="btn btn-primary btn-sm"
+                          data-toggle="modal"
+                          data-target="#exampleModal"
+                        >
+                          <i class="nav-icon ti ti-plus mx-2"></i> Create
+                        </button>
                       </div>
                     </div>
                     <div class="card-body">
-                      <div class="row">
-                        <div class="col-lg-12">
-                          <div class="event-calendar">
-                            <div id="event-calendar"></div>
+                      <div class="datatable-wrapper table-responsive">
+                        <div
+                          id="datatable_wrapper"
+                          class="dataTables_wrapper dt-bootstrap4"
+                        >
+                          <div class="row">
+                            <div class="col-sm-12 col-md-6"></div>
+                            <div class="col-sm-12 col-md-6"></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <table
+                                id="datatable"
+                                class="display compact table table-striped table-bordered dataTable"
+                                role="grid"
+                                aria-describedby="datatable_info"
+                              >
+                                <thead>
+                                  <tr role="row">
+                                    <th
+                                      class="sorting_asc"
+                                      tabindex="0"
+                                      aria-controls="datatable"
+                                      rowspan="1"
+                                      colspan="1"
+                                      aria-sort="ascending"
+                                      aria-label="Name: activate to sort column descending"
+                                      style="width: 155.672px"
+                                    >
+                                      DELIVERY DATE
+                                    </th>
+
+                                    <th
+                                      class="sorting"
+                                      tabindex="0"
+                                      aria-controls="datatable"
+                                      rowspan="1"
+                                      colspan="1"
+                                      aria-label="Office: activate to sort column ascending"
+                                      style="width: 113.078px"
+                                    >
+                                      ITEM
+                                    </th>
+                                    <th
+                                      class="sorting"
+                                      tabindex="0"
+                                      aria-controls="datatable"
+                                      rowspan="1"
+                                      colspan="1"
+                                      aria-label="Office: activate to sort column ascending"
+                                      style="width: 113.078px"
+                                    >
+                                      CAPACITY
+                                    </th>
+                                    <th
+                                      class="sorting"
+                                      tabindex="0"
+                                      aria-controls="datatable"
+                                      rowspan="1"
+                                      colspan="1"
+                                      aria-label="Office: activate to sort column ascending"
+                                      style="width: 113.078px"
+                                    >
+                                      BOOKED
+                                    </th>
+                                    <th
+                                      class="sorting"
+                                      tabindex="0"
+                                      aria-controls="datatable"
+                                      rowspan="1"
+                                      colspan="1"
+                                      aria-label="Office: activate to sort column ascending"
+                                      style="width: 113.078px"
+                                    >
+                                      LOAD
+                                    </th>
+
+                                    <th
+                                      class="sorting"
+                                      tabindex="0"
+                                      aria-controls="datatable"
+                                      rowspan="1"
+                                      colspan="1"
+                                      aria-label="Salary: activate to sort column ascending"
+                                      style="width: 85.4844px"
+                                    >
+                                      ACTION
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr role="row" class="odd">
+                                    <td class="sorting_1">
+                                      21 December 2025, Monday
+                                    </td>
+
+                                    <td>BLAZER</td>
+                                    <td>10</td>
+                                    <td>9</td>
+                                    <td>
+                                      <span class="badge bg-danger text-white"
+                                        >- 1</span
+                                      >
+                                    </td>
+
+                                    <td>
+                                      <button
+                                        class="btn btn-info btn-xs"
+                                        type="button"
+                                        data-toggle="modal"
+                                        data-target="#exampleModal-edit"
+                                      >
+                                        <i class="fa fa-edit"></i>
+                                      </button>
+                                      <button
+                                        id="sweetalert-09"
+                                        class="btn btn-danger btn-xs"
+                                        aria-label="Try me! Example: passing a parameter, you can execute something else for 'Cancel'"
+                                      >
+                                        <i class="fa fa-trash"></i>
+                                      </button>
+                                    </td>
+                                  </tr>
+
+                                  <tr role="row" class="odd">
+                                    <td class="sorting_1">
+                                      22 December 2025, Tuesday
+                                    </td>
+
+                                    <td>BLAZER</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>
+                                      <span class="badge bg-warning text-white"
+                                        >0</span
+                                      >
+                                    </td>
+
+                                    <td>
+                                      <button
+                                        class="btn btn-info btn-xs"
+                                        type="button"
+                                        data-toggle="modal"
+                                        data-target="#exampleModal-edit"
+                                      >
+                                        <i class="fa fa-edit"></i>
+                                      </button>
+                                      <button
+                                        id="sweetalert-09"
+                                        class="btn btn-danger btn-xs"
+                                        aria-label="Try me! Example: passing a parameter, you can execute something else for 'Cancel'"
+                                      >
+                                        <i class="fa fa-trash"></i>
+                                      </button>
+                                    </td>
+                                  </tr>
+
+                                  <tr role="row" class="odd">
+                                    <td class="sorting_1">
+                                      23 December 2025, Wednesday
+                                    </td>
+
+                                    <td>BLAZER</td>
+                                    <td>10</td>
+                                    <td>15</td>
+                                    <td>
+                                      <span class="badge bg-danger text-white"
+                                        >+5</span
+                                      >
+                                    </td>
+
+                                    <td>
+                                      <button
+                                        class="btn btn-info btn-xs"
+                                        type="button"
+                                        data-toggle="modal"
+                                        data-target="#exampleModal-edit"
+                                      >
+                                        <i class="fa fa-edit"></i>
+                                      </button>
+                                      <button
+                                        id="sweetalert-09"
+                                        class="btn btn-danger btn-xs"
+                                        aria-label="Try me! Example: passing a parameter, you can execute something else for 'Cancel'"
+                                      >
+                                        <i class="fa fa-trash"></i>
+                                      </button>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -173,19 +401,26 @@
                   </div>
                 </div>
               </div>
+              <!-- end row -->
             </div>
           </div>
         </div>
       </div>
       <!-- end app-wrap -->
     </div>
-    <!-- end app -->
-    <!-- Modal -->
-    <div id="calendarModal" class="modal fade" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
+
+    <!--create Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Selected Date</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Add Items</h5>
             <button
               type="button"
               class="close"
@@ -196,41 +431,205 @@
             </button>
           </div>
           <div class="modal-body">
-            <p id="selectedDate"></p>
+            <form>
+              <div class="row">
+                <div class="col-lg-6 col-12">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Select Date *</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Select Items *</label>
+                    <select class="form-control form-select">
+                      <option value="" selected>Select</option>
+                      <option value="shirt">SHIRT</option>
+                      <option value="kurta">KURTA</option>
+                      <option value="pant">Jacket</option>
+                      <option value="kurta">SHERWANI</option>
+                      <option value="pant">JODHPURI</option>
+                      <option value="kurta">BLAZER</option>
+                      <option value="pant">BANDI</option>
+                      <option value="kurta">KHAMEEJ</option>
+                      <option value="pant">PANT</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Capacity *</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Booked *</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Load *</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-secondary btn-sm"
               data-dismiss="modal"
             >
-              Close
+              <i class="fa fa-close"></i> Close
+            </button>
+            <button type="button" class="btn btn-primary btn-sm">
+              <i class="fa fa-save"></i> Submit
             </button>
           </div>
         </div>
       </div>
     </div>
+
+    <!--edit Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal-edit"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel-edit"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit Items</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col-lg-6 col-12">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Select Date *</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Select Items *</label>
+                    <select class="form-control form-select">
+                      <option value="" selected>Select</option>
+                      <option value="shirt">SHIRT</option>
+                      <option value="kurta">KURTA</option>
+                      <option value="pant">Jacket</option>
+                      <option value="kurta">SHERWANI</option>
+                      <option value="pant">JODHPURI</option>
+                      <option value="kurta">BLAZER</option>
+                      <option value="pant">BANDI</option>
+                      <option value="kurta">KHAMEEJ</option>
+                      <option value="pant">PANT</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Capacity *</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Booked *</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Load *</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id=""
+                      aria-describedby=""
+                      placeholder=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm"
+              data-dismiss="modal"
+            >
+              <i class="fa fa-close"></i> Close
+            </button>
+            <button type="button" class="btn btn-primary btn-sm">
+              <i class="fa fa-save"></i> Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end app -->
+
     <!-- plugins -->
     <script src="assets/js/vendors.js"></script>
 
     <!-- custom app -->
     <script src="assets/js/app.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var calendarEl = document.getElementById("event-calendar");
-
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: "dayGridMonth",
-          dateClick: function (info) {
-            document.getElementById("selectedDate").textContent =
-              "Selected Date: " + info.dateStr;
-            $("#calendarModal").modal("show");
-          },
-        });
-
-        calendar.render();
-      });
-    </script>
   </body>
 </html>

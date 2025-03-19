@@ -20,6 +20,19 @@
     <!-- app style -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Include Choices.js CSS & JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
   </head>
 
   <body>
@@ -103,7 +116,7 @@
                         >
                           <div class="mr-1">
                             <h4 class="text-white mb-0">Admin</h4>
-                            <small class="text-white">admin@example.com</small>
+                            <small class="text-white">salesman@gmail.com</small>
                           </div>
                           <a
                             href="index.html"
@@ -155,7 +168,11 @@
                                 >BILL NO.</label
                               >
                               <div class="col-sm-8">
-                                <input type="text" class="form-control" />
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  value="001"
+                                />
                               </div>
                             </div>
                             <div class="form-group row">
@@ -167,7 +184,9 @@
                                   <option value="" selected>
                                     Select (DROPLIST)
                                   </option>
-                                  <option value="">Suraj Jamdade</option>
+                                  <option value="" selected>
+                                    Suraj Jamdade
+                                  </option>
                                   <option value="">Suraj Jamdade</option>
                                 </select>
                               </div>
@@ -177,7 +196,11 @@
                                 >NAME</label
                               >
                               <div class="col-sm-8">
-                                <input type="text" class="form-control" />
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  value="Suraj Jamdade"
+                                />
                               </div>
                             </div>
 
@@ -186,7 +209,11 @@
                                 >MOBILE NUMBER</label
                               >
                               <div class="col-sm-8">
-                                <input type="text" class="form-control" />
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  value="+91 9090909090"
+                                />
                               </div>
                             </div>
 
@@ -270,7 +297,9 @@
                                         <option value="" selected>
                                           Select
                                         </option>
-                                        <option value="shirt">SHIRT</option>
+                                        <option value="shirt" selected>
+                                          SHIRT
+                                        </option>
                                         <option value="pant">PANT</option>
                                         <option value="kurta">KURTA</option>
                                       </select>
@@ -285,6 +314,7 @@
                                         name="quantity[]"
                                         placeholder="Enter quantity"
                                         min="1"
+                                        value="2"
                                       />
                                     </div>
                                   </div>
@@ -296,6 +326,7 @@
                                         class="form-control"
                                         name="price[]"
                                         placeholder="Enter price"
+                                        value="Rs.2000"
                                       />
                                     </div>
                                   </div>
@@ -1137,19 +1168,15 @@
                               <tr>
                                 <th scope="col" class="text-dark">STYLE</th>
                                 <th scope="col" class="text-dark">
-                                  <select
-                                    name=""
-                                    id=""
-                                    class="form-control form-select"
-                                  >
-                                    <option value="">Select</option>
+                                  <!-- Multi-Select Dropdown -->
+                                  <select id="multiSelect" multiple>
                                     <option value="1">1 BACK POCKET</option>
                                     <option value="2">2 BACK POCKET</option>
-                                    <option value="2">CROSS POCKET</option>
-                                    <option value="2">
+                                    <option value="3">CROSS POCKET</option>
+                                    <option value="4">
                                       2 PLATE SIDE POCKET
                                     </option>
-                                    <option value="2">ELASTIC PANT</option>
+                                    <option value="5">ELASTIC PANT</option>
                                   </select>
                                 </th>
                               </tr>
@@ -1369,6 +1396,15 @@
             reader.readAsDataURL(file);
           }
         });
+    </script>
+
+    <!-- Initialize Choices.js -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Choices("#multiSelect", {
+          removeItemButton: true,
+        });
+      });
     </script>
   </body>
 </html>

@@ -61,8 +61,11 @@ html {
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
-  scrollbar-width: auto;
-  scrollbar-color: #ff4c51  #ffffff;
+  scrollbar-width: 2px;
+}
+
+table{
+  overflow-x: hidden;
 }
 
 /* Chrome, Edge, and Safari */

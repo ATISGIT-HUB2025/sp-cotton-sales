@@ -103,7 +103,7 @@
                         >
                           <div class="mr-1">
                             <h4 class="text-white mb-0">Admin</h4>
-                            <small class="text-white">admin@example.com</small>
+                            <small class="text-white">salesman@gmail.com</small>
                           </div>
                           <a
                             href="index.html"
@@ -159,32 +159,70 @@
                 <div class="col-lg-12">
                   <div class="card card-statistics">
                     <div class="row mt-4 p-3">
-                      <!-- Search Input -->
-                      <div class="col-lg-6 col-12 mb-2">
-                        <div class="input-group">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Search Here...."
-                            aria-label="Search"
-                            aria-describedby="button-addon2"
-                          />
-                          <div class="input-group-append">
-                            <button
-                              class="btn btn-primary"
-                              type="button"
-                              id="button-addon2"
-                            >
-                              Search
-                            </button>
-                          </div>
-                        </div>
+                      <!-- Filter Dropdown -->
+                      <div class="col-lg-3 col-12">
+                        <select name="" id="" class="form-control form-select">
+                          <option value="" selected disabled>
+                            Select Salesman
+                          </option>
+                          <option value="1">Suraj Jamdade</option>
+                          <option value="2">Suraj Jamdade</option>
+                          <option value="3">Suraj Jamdade</option>
+                          <option value="4">Suraj Jamdade</option>
+                          <option value="5">Suraj Jamdade</option>
+                          <option value="6">Suraj Jamdade</option>
+                          <option value="7">Suraj Jamdade</option>
+                          <option value="8">Suraj Jamdade</option>
+                          <option value="9">Suraj Jamdade</option>
+                          <option value="10">Suraj Jamdade</option>
+                        </select>
+                      </div>
+                      <div class="col-lg-3 col-12">
+                        <select name="" id="" class="form-control form-select">
+                          <option value="" selected disabled>
+                            Select Month
+                          </option>
+                          <option value="1">January</option>
+                          <option value="2">February</option>
+                          <option value="3">March</option>
+                          <option value="4">April</option>
+                          <option value="5">May</option>
+                          <option value="6">June</option>
+                          <option value="7">July</option>
+                          <option value="8">August</option>
+                          <option value="9">September</option>
+                          <option value="10">October</option>
+                          <option value="11">November</option>
+                          <option value="12">December</option>
+                        </select>
                       </div>
 
-                      <!-- Filter Dropdown -->
+                      <div class="col-lg-3 col-12">
+                        <select name="" id="" class="form-control form-select">
+                          <option value="" selected disabled>
+                            Select Year
+                          </option>
+                          <option value="2021">2021</option>
+                          <option value="2022">2022</option>
+                          <option value="2023">2023</option>
+                          <option value="2024">2024</option>
+                          <option value="2025">2025</option>
+                          <option value="2026">2026</option>
+                          <option value="2027">2027</option>
+                          <option value="2028">2028</option>
+                          <option value="2029">2029</option>
+                          <option value="2030">2030</option>
+                        </select>
+                      </div>
 
                       <div class="col-lg-3 col-12">
-                        <input type="date" class="form-control" />
+                        <button
+                          type="button"
+                          class="btn btn-primary btn-xs"
+                          style="height: 40px"
+                        >
+                          <i class="fa fa-filter"></i> Filter
+                        </button>
                       </div>
                     </div>
 
@@ -240,7 +278,7 @@
                                       aria-label="Office: activate to sort column ascending"
                                       style="width: 113.078px"
                                     >
-                                      Bill No.
+                                      Month
                                     </th>
 
                                     <th
@@ -252,7 +290,7 @@
                                       aria-label="Office: activate to sort column ascending"
                                       style="width: 113.078px"
                                     >
-                                      Quantity
+                                      Year
                                     </th>
                                     <th
                                       class="sorting"
@@ -272,67 +310,25 @@
                                     <td class="sorting_1">1</td>
 
                                     <td>Suraj Jamdade</td>
-                                    <td>
-                                      <span class="badge bg-info text-white"
-                                        >001</span
-                                      >
-                                      <span class="badge bg-info text-white"
-                                        >002</span
-                                      >
-                                      <span class="badge bg-info text-white"
-                                        >003</span
-                                      >
-                                      <span class="badge bg-info text-white"
-                                        >004</span
-                                      >
-                                    </td>
+                                    <td>January</td>
 
-                                    <td>200</td>
+                                    <td>2025</td>
                                     <td>
                                       <span class="badge bg-success text-white"
                                         >200</span
                                       >
                                     </td>
                                   </tr>
-
-                                  <tr role="row" class="odd">
+                                  <tr role="row" class="even">
                                     <td class="sorting_1">2</td>
 
-                                    <td class="text-dark">Vikas Sani</td>
-                                    <td>
-                                      <span class="badge bg-info text-white"
-                                        >005</span
-                                      >
-                                      <span class="badge bg-info text-white"
-                                        >006</span
-                                      >
-                                    </td>
+                                    <td>Suraj Jamdade</td>
+                                    <td>February</td>
 
-                                    <td class="text-dark">100</td>
+                                    <td>2025</td>
                                     <td>
                                       <span class="badge bg-success text-white"
                                         >100</span
-                                      >
-                                    </td>
-                                  </tr>
-
-                                  <tr role="row" class="odd">
-                                    <td class="sorting_1">3</td>
-
-                                    <td class="text-dark">Nesat</td>
-                                    <td>
-                                      <span class="badge bg-info text-white"
-                                        >007</span
-                                      >
-                                      <span class="badge bg-info text-white"
-                                        >008</span
-                                      >
-                                    </td>
-
-                                    <td class="text-dark">150</td>
-                                    <td>
-                                      <span class="badge bg-success text-white"
-                                        >150</span
                                       >
                                     </td>
                                   </tr>
